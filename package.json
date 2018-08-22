@@ -1,0 +1,23 @@
+{
+  "name": "movielistapp",
+  "version": "1.0.0",
+  "description": "Movie list app using React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel . --out-dir compiled --presets=env,react --ignore=node_modules,compiled --source-maps inline -w"
+  },
+  "author": "Chii",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
