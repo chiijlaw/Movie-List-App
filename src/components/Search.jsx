@@ -5,7 +5,7 @@ class Search extends React.Component {
       val: ""
     };
   }
-  handlSearch(e) {
+  searchBox(e) {
     this.setState({
       val: e.target.value
     });
@@ -20,11 +20,15 @@ class Search extends React.Component {
             aria-describedby="emailHelp"
             placeholder="Movie Title"
             value={this.state.value}
-            onChange={this.handlSearch.bind(this)}
+            onChange={this.searchBox.bind(this)}
           />
         </div>
         <div className="col-sm">
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={() => this.props.handleSearch(this.state.val)}
+          >
             Submit
           </button>
         </div>

@@ -6,15 +6,32 @@ var movies = [
   { title: "Ex Machina" }
 ];
 
-var App = () => (
-  <div className="container">
-    <div>
-      <Search />
-    </div>
-    <div>
-      <MovieList movies={movies} />
-    </div>
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      movies: movies
+    };
+  }
+  handleSearch(query) {
+    for (let i = 0; i < movies.length; i++) {
+      if (movies[i].title === query) {
+        alert("movie found");
+      }
+    }
+  }
+  render() {
+    return (
+      <div className="container">
+        <div>
+          <Search handleSearch={this.handleSearch.bind(this)} />
+        </div>
+        <div>
+          <MovieList movies={movies} />
+        </div>
+      </div>
+    );
+  }
+}
 
 window.App = App;

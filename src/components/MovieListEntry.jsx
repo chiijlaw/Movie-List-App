@@ -9,10 +9,3 @@ var MovieListEntry = props => (
     </div>
   </div>
 );
-
-//<div className="container">
-//     <p className="col">
-//       {props.movie.title}
-//       !!!!
-//     </p>
-//   </div>
